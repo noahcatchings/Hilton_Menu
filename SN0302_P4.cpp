@@ -5,26 +5,33 @@
 
 
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int getChoice();
+int readRoomPrices();
+double addToOrder();
+
+
 
 
 
 int main() {
 	int selection;
+	int roomNum;
 	selection = getChoice();
 	
 	do{
 		switch(selection){
 			case 1: 
-				cout << "1" << endl;
+				roomNum = readRoomPrices();
+				readRoomPrices();
 				break;
 			case 2:
-				cout << "2" << endl;
+				readRoomPrices();
 				break;
 			case 3: 
-				cout << "3" << endl;
+				readRoomPrices();
 				break;
 			default:
 				exit(1);
@@ -49,4 +56,18 @@ int getChoice(){
 	cin >> choice;
 	
 	return choice;
+}
+
+int readRoomPrices(){
+	int room;
+	
+	cout << "Select a Room: " << endl;
+	cout << "1.) 1 Queen $65.17" << endl;
+	cout << "2.) 2 Queen $95.13" << endl;
+	cout << "3.) 1 King $150.15" << endl;
+	cout << "4.) 2 King $253.25" << endl;
+	cout << "5.) Luxury Suite for Two $357.99" << endl;
+	cin >> room;
+	
+	return room;
 }
