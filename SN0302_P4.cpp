@@ -8,7 +8,7 @@
 #include <fstream>
 using namespace std;
 
-int getChoice();
+int getHotelChoice();
 int readRoomPrices();
 double addToOrder();
 
@@ -19,7 +19,7 @@ double addToOrder();
 int main() {
 	int selection;
 	int roomNum;
-	selection = getChoice();
+	selection = getHotelChoice();
 	
 	do{
 		switch(selection){
@@ -43,7 +43,7 @@ int main() {
 	return 0;
 }
 
-int getChoice(){
+int getHotelChoice(){
 	int choice; 
 	
 	cout << "WELCOME TO THE HILTON HONORS BOOKING SYSTEM!" << endl;
